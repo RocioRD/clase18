@@ -55,15 +55,15 @@ app.get('/formulario', (req, res, next) => {
 
 app.get('/productos', (req, res, next) => {
 
-  let sql = 'SELECT * FROM producto';
+  //let sql = 'SELECT * FROM producto';
   let datos = {};
-  conexion.query(sql, datos, (error, result) => {
-   if (error) throw error;
+  //conexion.query(sql, datos, (error, result) => {
+   //if (error) throw error;
     res.render('productos', {
          titulo: 'formulario de productos',
-         results: result,
+         results: {},
     });
-  });
+  //});
 });
 
 app.post('/formulario', (req, res) => {
