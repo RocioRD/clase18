@@ -10,11 +10,11 @@ const PORT = process.env.PORT || 8080;
 
 // conexion a la base de datos
 const conexion = mysql.createConnection({
-host: 'localhost',//process.env.HOST,
-user: 'root',//process.env.USER,
-port: 3306,
-password: 'password',// process.env.PASSWORD,
-database: 'fullstack'// process.env.DATABASE
+host: process.env.HOST,
+user: process.env.USER,
+port: process.env.PORT,
+password: process.env.PASSWORD,
+database: process.env.DATABASE
 });
 
 
