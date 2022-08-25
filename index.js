@@ -9,15 +9,15 @@ const app = express();
 const PORT = process.env.PORT || 8080;
 
 // conexion a la base de datos
-/*const conexion = mysql.createConnection({
+const conexion = mysql.createConnection({
 host: 'localhost',//process.env.HOST,
 user: 'root',//process.env.USER,
 port: 3306,
 password: 'password',// process.env.PASSWORD,
 database: 'fullstack'// process.env.DATABASE
 });
-*/
-/*
+
+
 conexion.connect((err) => {
 if (err) {
   console.error('Error en la conexion: ${err.stack}')
@@ -25,7 +25,7 @@ if (err) {
 }
 console.log(`Conectado a la base de datos ${process.env.DATABASE}`);
 });
-*/
+
 
 // configurar middelwares
 app.use(express.json());
@@ -52,7 +52,7 @@ app.get('/formulario', (req, res, next) => {
   });
 });
 
-/*
+
 app.get('/productos', (req, res, next) => {
 
   let sql = 'SELECT * FROM producto';
@@ -64,7 +64,7 @@ app.get('/productos', (req, res, next) => {
          results: result,
     });
   });
-});*/
+});
 
 app.post('/formulario', (req, res) => {
 // desestructuracion de datos
